@@ -1,0 +1,103 @@
+/* Viewports */
+@-o-viewport { width: auto, device-width; zoom: 1; }
+@-ms-viewport { width: auto, device-width; zoom: 1; }
+@viewport { width: auto, device-width; zoom: 1; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bckColor);
+  color: var(--fontColor);
+  font-family: var(--fontSans);
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content*/
+@custom-selector :--h1 h1, .h1-like;
+@custom-selector :--h2 h2, .h2-like;
+@custom-selector :--h3 h3, .h3-like;
+@custom-selector :--h4 h4, .h4-like;
+@custom-selector :--h5 h5, .h5-like;
+@custom-selector :--h6 h6, .h6-like;
+@custom-selector :--hn h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like, .hn;
+
+@custom-selector :--typographySection blockquote, dl, ol, p, pre, ul, .§;
+@custom-selector :--list dl, ol, ul, .list;
+
+@custom-selector :--link a, .link;
+
+:--hn,
+:--typographySection {
+  margin: calc(var(--baseline) / 2) 0;
+  line-height: var(--baseline);
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ## Heading */
+:--hn {
+  color: var(--base02);
+  font-weight: 400;
+  font-family: var(--fontSerif);
+  text-rendering: geometricPrecision;
+}
+
+:--h1  {
+  font-weight: 900;
+  font-size: calc(var(--baseline) * 2);
+  line-height: calc(var(--baseline) * 3);
+}
+
+:--h2 {
+  font-size: calc(var(--baseline) * 1.5);
+  line-height: calc(var(--baseline) * 2);
+}
+
+:--h3 {
+  font-size: var(--baseline);
+  line-height: calc(var(--baseline) * 1.5);
+}
+
+:--h4 {
+  font-weight: 700;
+}
+
+:--h5 {
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+/* ## Section Breaks */
+blockquote,
+:--list {
+  margin-left: var(--baseline);
+  padding-left: calc(var(--baseline) / 2);
+}
+
+blockquote,
+:--list.flattened {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  list-style: square;
+}
+
+/* ## Links */
+:--link:link {
+  border: 0;
+  background: transparent;
+  color: var(--linkColor);
+  transition: color calc(var(--timer) / 3);
+}
+
+:--link:hover, :--link:focus {
+  color: color(var(--linkColor) lightness(+25%));
+}
+
+:--link:active,
+:--link:visited {
+  color: color(var(--linkColor) blackness(+50%));
+}
