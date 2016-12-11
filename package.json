@@ -1,0 +1,18 @@
+{
+  "name": "tpl-thomasgirard-fr",
+  "version": "1.0.0",
+  "description": "Personnal theme for hugo",
+  "scripts": {
+    "build:css": "node bin/build-css.js",
+    "watch:css": "nodemon -e css -w static_src/css --exec \"npm run build:css\""
+  },
+  "author": "Thomas Girard <hello@thomasgirard.fr> (http://www.thomasgirard.fr/)",
+  "license": "LGPLv3",
+  "devDependencies": {
+    "cssnano": "^3.8.2",
+    "nodemon": "^1.11.0",
+    "postcss": "^5.2.6",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.0.0"
+  }
+}
