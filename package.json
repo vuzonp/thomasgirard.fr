@@ -7,7 +7,6 @@
     "build:html": "node bin/build-html.js",
     "watch:css": "nodemon -e css -w src/css --exec \"npm run build:css\"",
     "watch:html": "nodemon -w src/hbs --exec \"npm run build:html\""
-
   },
   "author": "Thomas Girard <hello@thomasgirard.fr> (http://www.thomasgirard.fr/)",
   "license": "LGPLv3",
@@ -15,6 +14,7 @@
     "cli-color": "^1.1.0",
     "cssnano": "^3.8.2",
     "glob": "^7.1.1",
+    "handlebars-helpers": "^0.7.5",
     "nodemon": "^1.11.0",
     "postcss": "^5.2.6",
     "postcss-cssnext": "^2.9.0",

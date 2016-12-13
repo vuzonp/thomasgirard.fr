@@ -4,7 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const clc = require('cli-color');
 const glob = require("glob");
-const Handlebar = require("handlebars");
+const Handlebars = require("handlebars");
+const helpers = require('handlebars-helpers')();
+// const comparison = helpers.comparison();
 
 const data = require("../data.json");
 const src = path.resolve(__dirname, "..", "src/hbs");
@@ -28,7 +30,7 @@ function make(file) {
       })
     );
 
-    template = Handlebar.compile(src);
+    template = Handlebars.compile(src);
     html = template(data);
 
     fs.writeFile(outfile, html, (err) => {
@@ -57,7 +59,7 @@ function loadPartials(dirname) {
       files.forEach(file => {
         const partialContent = fs.readFileSync(file);
         if (partialContent) {
-          Handlebar.registerPartial(
+          Handlebars.registerPartial(
             path.parse(file)["name"],
             partialContent.toString()
           );
