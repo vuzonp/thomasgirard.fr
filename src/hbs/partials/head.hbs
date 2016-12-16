@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>{{{ page.title }}} | {{{ sitename }}}</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+  <meta name="referrer" content="unsafe-url" />
+  <meta name="description" content="{{{ page.description }}}" />
+
+  <!-- Fold's styles and other main priority styles-->
+  <style media="screen">
+
+    /* https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+    .a11y-sr-only, .sprite-svg {
+      border: 0 !important;
+    	clip: rect(1px, 1px, 1px, 1px) !important;
+    	-webkit-clip-path: inset(50%) !important;
+      clip-path: inset(50%) !important;
+    	height: 1px !important;
+    	overflow: hidden !important;
+    	padding: 0 !important;
+    	position: absolute !important;
+    	width: 1px !important;
+    	white-space: nowrap !important;
+    }
+    .a11y-sr-only--focusable:focus,
+    .a11y-sr-only--focusable:active {
+      clip: auto !important;
+    	-webkit-clip-path: none !important;
+    	clip-path: none !important;
+    	height: auto !important;
+    	overflow: visible !important;
+    	width: auto !important;
+    	white-space: normal !important;
+    }
+  </style>
+
+  <link rel="Stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i" />
+  <link rel="Stylesheet" type="text/css" href="./main.css" />
+
+  <link rel="canonical" href="{{ absUrl }}/{{ page.relUrl }}" />
+</head>
