@@ -1,0 +1,13 @@
+<!-- Main Menu -->
+<nav id="main-menu" role="navigation" class="site-menu__main">
+  <h2 class="a11y-sr-only">Navigation principale</h2>
+  <ul>
+    {{# each pages }}
+    <li class="home">
+      <a href="{{ ../absUrl }}/{{ relUrl }}"{{#is relUrl ""}} rel="home"{{/is}}>
+        {{{ title }}}
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</nav><!-- #main-menu -->
