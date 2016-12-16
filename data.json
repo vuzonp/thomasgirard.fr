@@ -1,3 +1,33 @@
 {
-  
+  "author": {
+    "firstname": "Thomas",
+    "lastname": "Girard",
+    "alias": "vuzonp",
+    "email": "hello@thomasgirard.fr"
+  },
+  "sitename": "Thomas Girard - Frontend Developper",
+  "description": "Développeur HTML5, CSS, JS &amp; SVG dans ma vie pro; illustrateur et photographe du dimanche quand je rentre chez moi…",
+  "lang": "fr-FR",
+  "absUrl": "http://www.thomasgirard.fr",
+  "issueUrl": "https://github.com/vuzonp/thomasgirard.fr/issues",
+
+  "pages": {
+    "home": {
+      "title": "Accueil",
+      "relUrl": ""
+    },
+
+    "about": {
+      "title": "En savoir plus",
+      "relUrl": "about.html",
+      "description": ""
+    },
+
+    "contact": {
+      "title": "Comment me contacter",
+      "relUrl": "contact-me.html",
+      "description": ""
+    }
+  }
+
 }
