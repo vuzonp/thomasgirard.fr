@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Personnal theme for hugo",
   "scripts": {
+
     "build:css": "node bin/build-css.js",
     "build:html": "node bin/build-html.js",
+
     "watch:css": "nodemon -e css -w src/css --exec \"npm run build:css\"",
-    "watch:html": "nodemon -w src/hbs --exec \"npm run build:html\""
+    "watch:html": "nodemon -e hbs -w src/hbs --exec \"npm run build:html\"",
+
+    "build": "npm run build:html && npm run build:css",
+    "watch": "nodemon -e css,hbs -w src --exec \"npm run build\""
+
   },
   "author": "Thomas Girard <hello@thomasgirard.fr> (http://www.thomasgirard.fr/)",
   "license": "LGPLv3",
