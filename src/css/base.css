@@ -75,10 +75,17 @@ blockquote,
 }
 
 blockquote,
-:--list.flattened {
+:--list.flattened,
+:--list.flattened li,
+:--list.inlined,
+:--list.inlined li {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
+}
+
+:--list.inlined li {
+  display: inline-block;
 }
 
 li {

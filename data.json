@@ -11,6 +11,11 @@
   "absUrl": "http://www.thomasgirard.fr",
   "issueUrl": "https://github.com/vuzonp/thomasgirard.fr/issues",
 
+  "socials": {
+    "twitter": "https://www.twitter.com/vuzonp",
+    "instagram": "https://www.instagram.com/vuzonp"
+  },
+
   "pages": {
     "home": {
       "title": "Accueil",

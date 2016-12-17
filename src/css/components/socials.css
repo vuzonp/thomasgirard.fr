@@ -1,0 +1,36 @@
+/* Boutons sociaux */
+
+.social-links {
+  display: inline-block;
+  overflow-x: hidden;
+  width: 8em;
+}
+
+.social-links .inner-wrapper {
+  display: table;
+  width: 200%;
+  transition: margin var(--timer);
+}
+
+.social-links .inner-wrapper:hover {
+  margin-left: -100%;
+}
+
+.social-links .pseudonym,
+.social-links .navlist {
+  display: table-cell;
+  width: 50%;
+  transition: all var(--tEffect) calc(var(--timer) * 2);
+  text-align: center;
+}
+
+.social-links .pseudonym {
+  cursor: pointer;
+}
+
+.social-links .navlist a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 calc(var(--baseline) / 3);
+  margin: 0 calc(var(--baseline) / 3);
+}
