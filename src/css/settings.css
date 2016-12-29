@@ -1,15 +1,19 @@
 @charset "UTF-8";
 
-/* ColorScheme (inspired from http://ethanschoonover.com/solarized) */
+/* ColorScheme */
 :root {
-  --base03: black;
-  --base02: dimgray;
-  --base01: gray;
-  --base00: darkgray;
-  --base0: silver;
-  --base1: lightgrey;
-  --base2: gainsboro;
-  --base3: white;
+  --dark0: #000;
+  --dark: #343230;
+  --dark1: #30393b;
+
+  --neutral0: #9d8958;
+  --neutral: #a58d5f;
+  --neutral1: #a89968;
+
+  --light0: #dcd7d2;
+  --light: #f1ece1;
+  --light1: #fcfbf8;
+
   --yellow: yellow;
   --orange: orange;
   --red: red;
@@ -22,11 +26,12 @@
 
 /* Typography */
 :root {
-  --bckColor: var(--base3);
-  --fontColor: var(--base03);
+  --background: var(--light0);
+  --foreground: var(--dark);
   --linkColor: var(--blue);
   --fontMono: "Fira Code", "Fira Mono", monospace;
   --fontSans: "Fira Sans", sans-serif;
+  --fontSmall: var(--fontSans);
   --fontSerif: "Merriweather", serif;
   --fontSize: 1rem;
   --baseline: 1.5rem;
