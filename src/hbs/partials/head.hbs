@@ -10,7 +10,7 @@
   <style media="screen">
 
     /* https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
-    .a11y-sr-only, .sprite-svg {
+    .a11y-sr, .sprite-svg {
       border: 0 !important;
     	clip: rect(1px, 1px, 1px, 1px) !important;
     	-webkit-clip-path: inset(50%) !important;
@@ -22,8 +22,8 @@
     	width: 1px !important;
     	white-space: nowrap !important;
     }
-    .a11y-sr-only--focusable:focus,
-    .a11y-sr-only--focusable:active {
+    .a11y-sr--focusable:focus,
+    .a11y-sr--focusable:active {
       clip: auto !important;
     	-webkit-clip-path: none !important;
     	clip-path: none !important;
@@ -32,6 +32,7 @@
     	width: auto !important;
     	white-space: normal !important;
     }
+    svg { display: none; }
   </style>
 
   <link rel="Stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />

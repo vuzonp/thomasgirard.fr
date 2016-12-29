@@ -1,0 +1,29 @@
+@custom-selector :--picto [class^="picto-"];
+
+:--picto {
+  display: inline-block;
+  fill: currentColor;
+  height: auto;
+  shape-rendering: geometricPrecision;
+  vertical-align: middle;
+  width: var(--baseline);
+}
+
+/* Burger Menu (animation) */
+.picto-burger {
+  & g:last-child {
+    opacity: 0;
+    transition: var(--timer);
+  }
+  &:hover g:last-child {
+    opacity: 1;
+  }
+}
+
+@media (--viewport-small) {
+
+  .picto-burger {
+
+  }
+
+}

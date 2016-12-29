@@ -1,0 +1,20 @@
+.goto-menu {
+  position: fixed;
+  right: calc(var(--baseline) / 2);
+  text-align: center;
+  top: calc(var(--baseline) / 2);
+  width: calc(var(--baseline) * 1.5);
+  z-index: 999;
+}
+
+.goto-menu a {
+  color: var(--dark0);
+  display: block;
+  font-family: var(--fontSmall);
+  text-decoration: none;
+  text-rendering: geometricPrecision;
+}
+
+.goto-menu .always-visible {
+  font-size: .75em;
+}

@@ -1,3 +1,17 @@
+/* Commons
+------------------------------------------------------------------------------*/
+
 @import "settings.css";
 @import "base.css";
 @import "tpl/header.css";
+
+
+/* Components
+------------------------------------------------------------------------------*/
+@import "components/pictograms.css";
+@import "components/nav.css";
+
+
+/* Specific Templates
+------------------------------------------------------------------------------*/
+

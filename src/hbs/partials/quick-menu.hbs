@@ -1,10 +1,26 @@
 <!-- A11y Quick Menu -->
 <nav id="quick-menu" class="site-quick-menu">
-  <h2 class="a11y-sr-only">Navigation rapide</h2>
-  <ul class="a11y-sr-only a11y-sr-only--focusable">
-    <li><a href="#content" tabindex="1">Aller au contenu</a></li>
-    <li><a href="#main-menu" tabindex="1">Aller au menu principal</a></li>
-    <li><a href="#main-footer" tabindex="1">Consulter les informations légales</a></li>
-    <li><a href="{{ issueUrl }}" tabindex="1">Report an issue</a></li>
+  <h2 class="a11y-sr">Navigation rapide</h2>
+  <ul class="flattened">
+    <li class="goto-menu">
+      <a href="#main-menu" tabindex="0">
+        <span class="a11y-sr a11y-sr--focusable">Aller au</span>
+        <span class="always-visible">menu</span>
+        <span aria-hidden="true" role="presentation" tabindex="-1">
+          <svg class="picto-burger" viewBox="0 0 6 7">
+            <g>
+              <rect x="0" y="0" width="6" height="1" />
+              <rect x="0" y="2" width="6" height="1" />
+              <rect x="0" y="4" width="6" height="1" />
+              <polygon points="1,5 3,6 5,5" />
+            </g>
+            <g><polygon points="1,5 3,7 5,5" /></g>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li><a class="a11y-sr a11y-sr--focusable" href="#content" tabindex="0">Aller au contenu</a></li>
+    <li><a class="a11y-sr a11y-sr--focusable" href="#main-footer" tabindex="0">Consulter les informations légales</a></li>
+    <li><a class="a11y-sr a11y-sr--focusable" href="{{ issueUrl }}" tabindex="0">Report an issue</a></li>
   </ul>
 </nav><!-- #quick-menu -->

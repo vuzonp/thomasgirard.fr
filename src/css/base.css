@@ -8,7 +8,12 @@ body {
   color: var(--foreground);
   font-family: var(--fontSans);
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-right: calc(var(--baseline) * 2);
 }
+
+
 
 /*https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content*/
 @custom-selector :--h1 h1, .h1-like;
