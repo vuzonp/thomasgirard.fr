@@ -27,8 +27,8 @@ body {
 
 :--hn,
 :--typographySection {
-  margin: calc(var(--baseline) / 2) 0;
   line-height: var(--baseline);
+  margin: calc(var(--baseline) / 2) 0;
   text-rendering: optimizeLegibility;
 }
 
@@ -36,14 +36,14 @@ body {
 /* ## Heading */
 :--hn {
   color: var(--base02);
+  /*font-family: var(--fontSerif);*/
   font-weight: 400;
-  font-family: var(--fontSerif);
   text-rendering: geometricPrecision;
 }
 
 :--h1  {
-  font-weight: 900;
   font-size: calc(var(--baseline) * 2);
+  font-weight: 900;
   line-height: calc(var(--baseline) * 3);
 }
 
@@ -62,8 +62,8 @@ body {
 }
 
 :--h5 {
-  font-weight: 300;
   font-style: italic;
+  font-weight: 300;
 }
 
 
@@ -79,9 +79,9 @@ blockquote,
 :--list.flattened li,
 :--list.inlined,
 :--list.inlined li {
+  list-style: none;
   margin-left: 0;
   padding-left: 0;
-  list-style: none;
 }
 
 :--list.inlined li {
@@ -94,8 +94,8 @@ li {
 
 /* ## Links */
 :--link:link {
-  border: 0;
   background: transparent;
+  border: 0;
   color: var(--linkColor);
   transition: color calc(var(--timer) / 3);
 }
