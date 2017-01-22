@@ -3,15 +3,18 @@
 
 @import "settings.css";
 @import "base.css";
-@import "tpl/header.css";
 
 
 /* Components
 ------------------------------------------------------------------------------*/
-@import "components/pictograms.css";
+@import "components/banner.css";
 @import "components/nav.css";
+@import "components/pictograms.css";
+@import "components/pictures.css";
+@import "components/socials.css";
 
 
 /* Specific Templates
 ------------------------------------------------------------------------------*/
 
+@import "templates/home.css";

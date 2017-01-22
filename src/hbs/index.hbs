@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
   {{> head page = pages.home }}
-  {{> sprite }}
-  <body class="homepage" itemscope itemtype="https://schema.org/WebSite">
+  <body class="homepage no-js" itemscope itemtype="https://schema.org/WebSite">
+    {{> sprite }}
+    {{> quick-menu }}
     <div class="site-wrapper" id="top">
 
-      {{> quick-menu }}
-
       <header id="banner" role="banner" class="site-header">
-        <div itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="site-header__inner" itemprop="hasPart" itemscope itemtype="https://schema.org/WPHeader">
           <h1 id="sitename" class="site-headline" itemprop="name">
-            {{> logo width=100 height=100 }}
+            {{ author.firstname }} {{ author.lastname }}
           </h1>
+          <p class="lead">{{ pages.home.description }}</p>
         </div>
       </header>
 
-      <main role="main" id="content" class="site-content wrapper" tabindex="-1">
+      <main role="main" id="content" class="site-content wrapper">
+
         <div class="site-menu site-menu-home">
           {{> main-menu }}
         </div>
 
-        <article id="home-article" class="homepage__content">
-
-          <div class="preamble">
-            <h2>Préambule</h2>
-            <p>Hello World</p>
+        <figure id="home-stage" class="home-stage stage stage--off">
+          <div aria-labelledby="mp-label" aria-describedby="mp-desc">
+            {{> main-picture }}
           </div>
+          <figcaption class="home-stage__caption">
+            <p>Lorem ipsum...</p>
+          </figcaption>
+        </figure>
 
-          <figure id="home-stage" class="home-stage stage stage--off">
-            <svg id="home-canvas" class="home-stage__canvas">
-              <!-- Do Something... -->
-            </svg>
-            <figcaption class="home-stage__caption">
-              <p>Lorem ipsum...</p>
-            </figcaption>
-          </figure>
-
+        <article id="home-article" class="homepage__content">
+          <!-- <div class="preamble">
+          <h2>Préambule</h2>
+          <p>Hello World</p>
+        </div> -->
         </article>
 
       </main>
 
-      {{> footer }}
-
+    {{> footer }}
     </div>
   </body>
 </html>

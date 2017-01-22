@@ -1,0 +1,117 @@
+<svg id="main-picture"
+class="home-stage__canvas pict pict--svg"
+viewBox="0 0 96 56"
+width="96"
+height="56">
+
+<title id="mp-label">Cycle</title>
+<desc id="mp-desc">A vectorial cyclocross</desc>
+
+<defs>
+  <symbol id="mp-wheel">
+    <g transform="translate(18.2, 18.2)">
+      <g>
+        <g id="mp-spokes">
+          <line id="mp-spoke" x1="2" y1="0" x2="2" y2="16" class="wire wire--thin no-fill" />
+          <use xlink:href="#mp-spoke" x="-2" />
+          <use xlink:href="#mp-spoke" x="-4" />
+        </g>
+        <use xlink:href="#mp-spokes" transform="rotate(45, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(90, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(135, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(180, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(-45, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(-90, 0, 0)" />
+        <use xlink:href="#mp-spokes" transform="rotate(-135, 0, 0)" />
+
+        <circle id="mp-rim" cx="0" cy="0" r="16" class="wire wire--bold no-fill" />
+        <circle id="mp-hub" cx="0" cy="0" r="4" />
+
+        <!-- Change time to increase / decrease speed -->
+        <animateTransform
+        attributeName="transform"
+        begin="0s"
+        dur="4s"
+        type="rotate"
+        from="0 0 0"
+        to="360 0 0"
+        repeatCount="indefinite" />
+      </g>
+    </g>
+  </symbol>
+  <symbol id="mp-sticker">
+    <text x="0" y="1.5" font-family="georgia" font-size="3">
+      <tspan>VUZONP</tspan>
+    </text>
+  </symbol>
+  <symbol id="mp-pedal" viewBox="0 0 48 48">
+    <g>
+      <rect x="21" y="23" width="6" height="2"  />
+      <animateTransform
+      attributeName="transform"
+      begin="0s"
+      dur="4s"
+      type="rotate"
+      from="0 24 24"
+      to="-360 24 24"
+      repeatCount="indefinite" />
+    </g>
+  </symbol>
+  <symbol id="mp-pedals" viewBox="0 0 48 48">
+    <g>
+      <line id="mp-crank" x1="12" y1="24" x2="36" y2="24" class="wire wire--bold" />
+      <use xlink:href="#mp-pedal" x="-12" />
+      <use xlink:href="#mp-pedal" x="12" />
+      <animateTransform
+      attributeName="transform"
+      begin="0s"
+      dur="4s"
+      type="rotate"
+      from="0 24 24"
+      to="360 24 24"
+      repeatCount="indefinite" />
+    </g>
+  </symbol>
+</defs>
+
+<g id="mp-cycle" transform="translate(4, 2)">
+
+  <g id="mp-saddle">
+    <path d="M30,6 42,6 28,4Z" class="wire" />
+    <line id="mp-seatpost" x1="32.5" y1="6" x2="42" y2="42" class="wire" />
+  </g>
+  <g id="mp-wheels">
+    <use xlink:href="#mp-wheel" x="18" y="36" transform="translate(-18.2,-18.2)" />
+    <use xlink:href="#mp-wheel" x="72" y="36" transform="translate(-18.2,-18.2)" />
+  </g>
+  <g id="mp-handlebar">
+    <path d="M64,14 64,8 72,8 Q76,8 76,12 Q76,16 70,16" class="wire wire--bold no-fill" />
+    <g id="mp-brake">
+      <path d="M71,8 75,6 77,6 75,9Z" class="wire" />
+      <path id="mp-brake-level" d="M75,6 Q80,6 80,12" class="wire no-fill" /><!-- Brake by editing (80,12 => 76,12) -->
+    </g>
+  </g>
+  <g id="mp-fork">
+    <line x1="64" y1="12" x2="72" y2="36" class="wire wire--bold green" />
+  </g>
+  <g id="mp-frame">
+    <path id="mp-tubes" d="M34,12 64,12 64,14 42,42Z" class="wire wire--bold no-fill green" />
+    <path id="mp-stays" d="M18,36 34,12 42,42Z" class="wire no-fill green" />
+  </g>
+  <g id="mp-chainring">
+    <g id="mp-chain">
+      <path d="M16,35 16,37 42,45 42,39Z" class="wire wire--thin no-fill" />
+    </g>
+    <circle cx="42" cy="42" r="4" />
+    <use xlink:href="#mp-pedals" x="42" y="42" width="32" height="32" transform="translate(-16,-16)" />
+  </g>
+  <g id="mp-bolts">
+    <circle cx="18" cy="36" r="1" />
+    <circle cx="72.5" cy="36" r="1" />
+  </g>
+  <g id="mp-stickers">
+    <use xlink:href="#mp-sticker" x="0" y="0" transform="translate(50,30) rotate(-52, 0, 0)" />
+    <use xlink:href="#mp-sticker" x="0" y="0" transform="translate(37.8,30) rotate(-105, 0, 0)" />
+  </g>
+</g>
+</svg>

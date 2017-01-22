@@ -1,0 +1,38 @@
+.pict {
+  display: block;
+}
+
+.pict--svg {
+  fill: var(--dark);
+  shape-rendering: geometricprecision;
+  stroke: none;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-width: 0;
+}
+
+/* Specific SVG  helpers */
+.pict--svg .no-fill {
+  fill: none;
+}
+.pict--svg .wire {
+  stroke: var(--dark);
+  stroke-width: 1.2;
+}
+.pict--svg .wire--thin {
+  stroke-opacity: .75;
+  stroke-width: .4;
+}
+.pict--svg .wire--bold {
+  stroke-width: 2.2;
+}
+
+.pict--svg .green {
+  fill:  var(--green);
+}
+
+.pict--svg .no-fill.green,
+.pict--svg line.green {
+  fill: none;
+  stroke: var(--green);
+}
